@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}博客详情{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'highlight/styles/github-dark.min.css' %}">
+    <script src={% static 'highlight/highlight.min.js' %}></script>
+{% endblock %}
+
+{% block main %}
+    <h1>{{ blog.title }}</h1>
+    <hr>
+    <div class="mt-2">
+        <img src="{% static 'image/me.jpg' %}" alt="" height="40" class="rounded-circle">
+        <span class="ms-2">{{ blog.author.username }}</span>
+        <span class="ms-2">于</span>
+        <span class="ms-2">{{ blog.pub_date }}</span> 发布
+    </div>
+    <hr>
+    <div class="py-2">
+        {{ blog.content | safe }}
+    </div>
+    <hr>
+    {#    <div class="mt-2">#}
+    {#        <h3>评论（10）:</h3>#}
+    {#        <form action="" method="POST"></form>#}
+    {#        <div class="mt-2">#}
+    {#            <input type="text" class="form-control" placeholder="请输入祝福">#}
+    {#        </div>#}
+    {##}
+    {#        <div class="text-end">#}
+    {#            <button type="button" class="btn btn-success mt-2">发表</button>#}
+    {#        </div>#}
+    {#    </div>#}
+
+
+    {#    <div>#}
+    {#        <ul class="list-group list-group-flush">#}
+    {#            <li class="list-group-item">#}
+    {#                <div class="d-flex justify-content-between">#}
+    {#                    <div class="user-info">#}
+    {#                        <img src="{% static 'image/1.jpg' %}" alt=" " height="30" width="30">#}
+    {#                        <span class="ms-2">嗨</span>#}
+    {#                    </div>#}
+    {##}
+    {#                    <div class="create-time">2024.10.17 23:46</div>#}
+    {##}
+    {#                </div>#}
+    {#            </li>#}
+    {##}
+    {#            <li class="list-group-item">祝福祝福哈哈哈哈</li>#}
+    {#            <li class="list-group-item">99呀</li>#}
+    {#            <li class="list-group-item">好甜呀</li>#}
+    {#        </ul>#}
+    {#    </div>#}
+    <script>
+        hljs.highlightAll()
+    </script>
+{% endblock %}

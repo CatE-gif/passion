@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乖乖的私人空间</title>
+    <link rel='stylesheet' href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<header class="p-3 text-bg-info border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="{% static 'image/12.jpg' %}" alt=" " height="40">
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">粥粥</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">爱粥粥</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control " placeholder="💖爱你❤..." aria-label="Search">
+            </form>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">登录</button>
+                <button type="button" class="btn btn-warning">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container bg-body p-3 rounded-3">
+    <h1>一起做过de事情</h1>
+    <div class="row row-cols-2 row-gap-3">
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    事情一
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">抓娃娃</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'image/me.jpg' %}" alt="" height="40" class="rounded-circle">
+                        薛定谔的猫
+                    </div>
+                    
+                    <div>
+                        7 days ago
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    事情二
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">看表演</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">
+                        粥粥
+                    </div>
+                    <div>
+                        7 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    事情三
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">涂石膏娃娃</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">
+                        粥粥
+                    </div>
+                    <div>
+                        7 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    事情四
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">牵手散步</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">
+                        粥粥
+                    </div>
+                    <div>
+                        7 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+</body>
+</html>

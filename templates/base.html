@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel='stylesheet' href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    {#    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>#}
+    {#    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>#}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+<header class="p-3 text-bg-info border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="{% static 'image/7.jpg' %}" alt=" " height="40">
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="/blog/pub" class="nav-link px-2 text-white">粥粥</a></li>
+                <li><a href="/blog/pub" class="nav-link px-2 text-white">薛定谔的猫</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control " placeholder="搜索..." aria-label="Search">
+            </form>
+
+            {% if user.is_authenticated %}
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{% static 'image/me.jpg' %}" alt="mdo" width="32" height="32"
+                             class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" style="">
+                        <li><a class="dropdown-item" href="/auth/logout">退出登录</a></li>
+                    </ul>
+                </div>
+                </div>
+            {% else %}
+                <div class="text-end">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="/auth/login" class="btn btn-outline-light me-2">登录</a></li>
+                        <li><a href="/auth/register" class="btn btn-warning">注册</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+
+
+    </div>
+    </div>
+</header>
+<main class="container bg-body p-3 rounded-3">
+    {% block main %}{% endblock %}
+</main>
+
+</body>
+</html>
+

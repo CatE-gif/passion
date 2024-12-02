@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乖乖的私人空间</title>
+    <link rel='stylesheet' href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<header class="p-3 text-bg-info border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="{% static 'image/12.jpg' %}" alt=" " height="40">
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">粥粥</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">爱粥粥</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control " placeholder="💖爱你❤..." aria-label="Search">
+            </form>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">登录</button>
+                <button type="button" class="btn btn-warning">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container bg-body p-3 rounded-3">
+    <h1>详细描述</h1>
+    <hr>
+    <div class="mt-2">
+        <img src="{% static 'image/me.jpg' %}" alt="" height="40" class="rounded-circle">
+        <span class="ms-2">薛定谔的猫</span>
+        <span class="ms-2">于</span>
+        <span class="ms-2">2024年10月17号 23:29</span> 发布
+    </div>
+    <hr>
+    <div class="py-2">
+        2024.10.17在一起啦！！！！
+    </div>
+    <hr>
+    <div class="mt-2">
+        <h3>评论（10）:</h3>
+        <form action="" method="POST"></form>
+        <div class="mt-2">
+            <input type="text" class="form-control" placeholder="请输入祝福">
+        </div>
+
+        <div class="text-end">
+            <button type="button" class="btn btn-success mt-2">发表</button>
+        </div>
+    </div>
+
+
+    <div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                    <div class="user-info">
+                        <img src="{% static 'image/1.jpg' %}" alt=" " height="30" width="30">
+                        <span class="ms-2">嗨</span>
+                    </div>
+                    
+                    <div class="create-time">2024.10.17 23:46</div>
+                    
+                </div>
+            </li>
+            
+            <li class="list-group-item">祝福祝福哈哈哈哈</li>
+            <li class="list-group-item">99呀</li>
+            <li class="list-group-item">好甜呀</li>
+        </ul>
+    </div>
+
+</main>
+
+</body>
+</html>
+
+

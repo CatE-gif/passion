@@ -1,0 +1,30 @@
+{#{% extends "base.html" %}#}
+{##}
+{#{% block head %}#}
+{#    <script src={% static "js/test2.js" %}></script>#}
+{#{% endblock %}#}
+{##}
+{#{% block main %}#}
+{#    <h1>啊哈哈哈哈</h1>#}
+{#    <div class="d-grid gap-2 col-6 mx-auto">#}
+{#        <button class="btn btn-primary w-10" id="test2-button">点击我！</button>#}
+{#    </div>#}
+{#{% endblock %}#}
+{##}
+{##}
+
+
+
+{% extends "base.html" %}
+
+{% block head %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/test2.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+    <h1>啊哈哈哈哈</h1>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary w-10" id="test2-button">点击我！</button>
+    </div>
+{% endblock %}

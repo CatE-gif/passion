@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乖乖的私人空间</title>
+    <link rel='stylesheet' href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'wangeditor/style.css' %}">
+    <script src="{% static 'wangeditor/index.js' %}"></script>
+    <script src="{% static 'js/pub_blog.js' %}"></script>
+    <style>
+      #editor—wrapper {
+        border: 1px solid #ccc;
+        z-index: 100; /* 按需定义 */
+      }
+      #toolbar-container { border-bottom: 1px solid #ccc; }
+      #editor-container { height: 500px; }
+    </style>
+</head>
+<body>
+
+<header class="p-3 text-bg-info border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="{% static 'image/12.jpg' %}" alt=" " height="40">
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">粥粥</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">爱粥粥</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control " placeholder="💖爱你❤..." aria-label="Search">
+            </form>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">登录</button>
+                <button type="button" class="btn btn-warning">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container bg-body p-3 rounded-3">
+    <h1>发布事情</h1>
+    <div class="mt-3">
+        <from action="" method="POST">
+            <div class="mb-3">
+                <label class="form-label">标题</label>
+                <input type="text" name="title" class="form-control">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">分类</label>
+                <select name="category" class="form-select">
+                    <option value="1">python</option>
+                    <option value="2">django</option>
+                    <option value="3">scratch</option>
+                </select>
+            </div>            
+            
+            <div class="mb-3">
+                <label class="form-label">内容</label>
+                    <div id="editor—wrapper">
+                        <div id="toolbar-container"><!-- 工具栏 --></div>
+                        <div id="editor-container"><!-- 编辑器 --></div>
+                    </div>
+            </div>            
+            <div class="mb-3 text-end">
+                <button class="btn btn-primary">发布</button>
+            </div>
+        </from>
+    </div>
+    
+</main>
+
+</body>
+</html>

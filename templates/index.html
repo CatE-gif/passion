@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+
+{% block title %}雪de私人空间{% endblock %}
+
+
+{% block main %}
+    <h1>提升自己de经历</h1>
+
+    <div class="row row-cols-2 row-gap-3">
+        {% for blog in blogs %}
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <a href="{% url 'blog:blog_detail' blog_id=blog.id %}" class="card-title">{{ blog.title}}</a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-conteit">{{ blog.content | striptags | truncatechars:20 }}</h5>
+                    </div>
+
+                    <div class="card-footer text-body-secondary d-flex justify-content-between">
+                        <div>
+                            <img src="{% static 'image/me.jpg' %}" alt="" height="40" class="rounded-circle">
+                            {{ blog.author.username }}
+                        </div>
+
+                        <div>
+                            发布时间：{{ blog.pub_date }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {#    <div class="row row-cols-2 row-gap-3">#}
+    {#        <div class="col">#}
+    {#            <div class="card text-center">#}
+    {#                <div class="card-header">#}
+    {#                    事情一#}
+    {#                </div>#}
+    {#                <div class="card-body">#}
+    {#                    <h5 class="card-title">抓娃娃</h5>#}
+    {#                    <a href="#" class="btn btn-primary">Go somewhere</a>#}
+    {#                </div>#}
+    {##}
+    {#                <div class="card-footer text-body-secondary d-flex justify-content-between">#}
+    {#                    <div>#}
+    {#                        <img src="{% static 'image/me.jpg' %}" alt="" height="40" class="rounded-circle">#}
+    {#                        薛定谔的猫#}
+    {#                    </div>#}
+    {##}
+    {#                    <div>#}
+    {#                        7 days ago#}
+    {#                    </div>#}
+    {#                </div>#}
+    {##}
+    {#            </div>#}
+    {#        </div>#}
+    {##}
+    {#        <div class="col">#}
+    {#            <div class="card text-center">#}
+    {#                <div class="card-header">#}
+    {#                    事情二#}
+    {#                </div>#}
+    {#                <div class="card-body">#}
+    {#                    <h5 class="card-title">看表演</h5>#}
+    {#                    <a href="#" class="btn btn-primary">Go somewhere</a>#}
+    {#                </div>#}
+    {#                <div class="card-footer text-body-secondary d-flex justify-content-between">#}
+    {#                    <div>#}
+    {#                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">#}
+    {#                        粥粥#}
+    {#                    </div>#}
+    {#                    <div>#}
+    {#                        7 days ago#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {##}
+    {#        <div class="col">#}
+    {#            <div class="card text-center">#}
+    {#                <div class="card-header">#}
+    {#                    事情三#}
+    {#                </div>#}
+    {#                <div class="card-body">#}
+    {#                    <h5 class="card-title">涂石膏娃娃</h5>#}
+    {#                    <a href="#" class="btn btn-primary">Go somewhere</a>#}
+    {#                </div>#}
+    {#                <div class="card-footer text-body-secondary d-flex justify-content-between">#}
+    {#                    <div>#}
+    {#                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">#}
+    {#                        粥粥#}
+    {#                    </div>#}
+    {#                    <div>#}
+    {#                        7 days ago#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {##}
+    {#        <div class="col">#}
+    {#            <div class="card text-center">#}
+    {#                <div class="card-header">#}
+    {#                    事情四#}
+    {#                </div>#}
+    {#                <div class="card-body">#}
+    {#                    <h5 class="card-title">牵手散步</h5>#}
+    {#                    <a href="#" class="btn btn-primary">Go somewhere</a>#}
+    {#                </div>#}
+    {#                <div class="card-footer text-body-secondary d-flex justify-content-between">#}
+    {#                    <div>#}
+    {#                        <img src="{% static 'image/you.jpg' %}" alt="" height="40" class="rounded-circle">#}
+    {#                        粥粥#}
+    {#                    </div>#}
+    {#                    <div>#}
+    {#                        7 days ago#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {##}
+    {#    </div>#}
+
+
+{% endblock %}
